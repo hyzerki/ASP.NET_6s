@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Task5</title>
+</head>
+<body>
+
+<div>
+    <input type="number" id="x"/>
+</div>
+<div>
+    <input type="number" id="y" />
+</div>
+<div>
+    <input type="button" onclick="send()"/>
+</div>
+<div id="result">
+
+</div>
+    <script>
+        function send() {
+            let x = document.getElementById("x");
+            let y = document.getElementById("y");
+
+            let result = document.getElementById("result");
+            let data = new FormData();
+            data.append("X", x.value);
+            data.append("Y", y.value);
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "/task5");
+
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState == 4) {                  
+                    if (xhr.status == 200) {                
+                        result.innerHTML = xhr.responseText; 
+                    } else {
+                        console.log("Server response: ", xhr.statusText);
+                    }
+                }
+            };
+            xhr.send(data);
+        }
+    </script>
+</body>
+</html>

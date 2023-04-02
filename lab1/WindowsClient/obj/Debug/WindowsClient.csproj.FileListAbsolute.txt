@@ -1,0 +1,11 @@
+D:\Everything i need\ПИС\Лабы\lab1\WindowsClient\bin\Debug\WindowsClient.exe.config
+D:\Everything i need\ПИС\Лабы\lab1\WindowsClient\bin\Debug\WindowsClient.exe
+D:\Everything i need\ПИС\Лабы\lab1\WindowsClient\bin\Debug\WindowsClient.pdb
+D:\Everything i need\ПИС\Лабы\lab1\WindowsClient\obj\Debug\WindowsClient.csproj.AssemblyReference.cache
+D:\Everything i need\ПИС\Лабы\lab1\WindowsClient\obj\Debug\WindowsClient.csproj.SuggestedBindingRedirects.cache
+D:\Everything i need\ПИС\Лабы\lab1\WindowsClient\obj\Debug\WindowsClient.Form1.resources
+D:\Everything i need\ПИС\Лабы\lab1\WindowsClient\obj\Debug\WindowsClient.Properties.Resources.resources
+D:\Everything i need\ПИС\Лабы\lab1\WindowsClient\obj\Debug\WindowsClient.csproj.GenerateResource.cache
+D:\Everything i need\ПИС\Лабы\lab1\WindowsClient\obj\Debug\WindowsClient.csproj.CoreCompileInputs.cache
+D:\Everything i need\ПИС\Лабы\lab1\WindowsClient\obj\Debug\WindowsClient.exe
+D:\Everything i need\ПИС\Лабы\lab1\WindowsClient\obj\Debug\WindowsClient.pdb
