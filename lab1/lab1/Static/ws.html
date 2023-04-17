@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <input id="startbtn" type="button" value="start" onclick="ws_start()" />
+        <input id="stopbtn" type="button" value="stop" onclick="ws_stop()" />
+    </div>
+    <div id="resultWindow">
+        
+    </div>
+
+    <script>
+        let ws;
+        let startBtn = document.getElementById("startbtn");
+        let stopBtn = document.getElementById("stopbtn");
+        let resWin = document.getElementById("resultWindow");
+        stopBtn.disabled = true;
+
+        function ws_start() {
+            if (!!ws) {
+                return;
+            }
+            ws = new WebSocket(`wss://localhost:44320/ws`);
+            ws.onopen=() => {
+                ws.send("Соединение успешно открыто");
+            };
+            ws.onclose=() => {
+                resWin.innerHTML += "<div>Соединение закрыто</div>";
+            };
+            ws.onmessage=(message) => {
+                resWin.innerHTML += `<div>${message.data}</div>`
+            };
+            startBtn.disabled = true;
+            stopBtn.disabled = false;
+        }
+
+        function ws_stop() {
+            ws.close(3001, "stopapplication");
+            ws = undefined;
+            startBtn.disabled = false;
+            stopBtn.disabled = true;
+        }
+    </script>
+</body>
+</html>
