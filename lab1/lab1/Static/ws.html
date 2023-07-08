@@ -40,7 +40,7 @@
 
         function ws_stop() {
             ws.close(3001, "stopapplication");
-            ws = undefined;
+            ws = null;
             startBtn.disabled = false;
             stopBtn.disabled = true;
         }

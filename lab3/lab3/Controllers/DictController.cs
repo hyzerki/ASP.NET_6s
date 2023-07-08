@@ -29,9 +29,13 @@ namespace lab3.Controllers
         [HttpPost]
         public async Task<ActionResult> AddSave(PhoneEntry phoneEntry)
         {
-            await fileDB.Add(phoneEntry);
-            await fileDB.Save();
-            return RedirectToActionPermanent("Index");
+            if (ModelState.IsValid)
+            {
+                await fileDB.Add(phoneEntry);
+                await fileDB.Save();
+                return RedirectToActionPermanent("Index");
+            }
+            return View("Add",phoneEntry);
         }
 
         public async Task<ActionResult> Update(int id)
@@ -39,12 +43,18 @@ namespace lab3.Controllers
             ViewBag.Phone = await fileDB.Get(id);
             return View();
         }
+            
         [HttpPost]
-        public async Task< ActionResult> UpdateSave(PhoneEntry phoneEntry)
+        public async Task<ActionResult> UpdateSave(PhoneEntry phoneEntry)
         {
-            await fileDB.Update(phoneEntry);
-            await fileDB.Save();
-            return RedirectToActionPermanent("Index");
+            if(ModelState.IsValid)
+            {
+                await fileDB.Update(phoneEntry);
+                await fileDB.Save();
+                return RedirectToActionPermanent("Index");
+            }
+            ViewBag.Phone = phoneEntry;
+            return View("Update", phoneEntry);
         }
 
         public async Task<ActionResult> Delete(int id)
