@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<div>
+    <div>
+        @ViewBag.Phone.Name @ViewBag.Phone.Phone
+    </div>
+    Вы действительно хотите удалить?
+    <form action="/Dict/DeleteSave" method="post">
+        <input type="hidden" name="Id" value="@ViewBag.Phone.Id"/>
+        <input class="btn btn-danger" type="submit" value="Подтвердить"/>
+    </form>
+</div>

@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<a href="/Dict/Add" class="btn btn-primary">Добавить новый</a>
+@foreach (PhoneDictionaryLib.PhoneEntry entry in ViewBag.Phones)
+            {
+                @Html.Partial("PhoneRow", entry)
+            }

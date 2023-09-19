@@ -1,0 +1,23 @@
+﻿@model lab3.Models.PhoneEntry
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+
+<form method="post" action="/Dict/UpdateSave">
+    <input name="Id" type="hidden" value="@ViewBag.Phone.Id"/>
+    <div>
+        <div>
+            <input name="Name" class="form-control" type="text" placeholder="Name" value="@ViewBag.Phone.Name" />
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+        <div>
+            <input name="Phone" class="form-control" type="text" placeholder="Phone number" value="@ViewBag.Phone.Phone" />
+            @Html.ValidationMessageFor(model => model.Phone)
+        </div>
+        <div>
+            <input class="btn btn-primary" type="submit" value="Изменить" />
+        </div>
+    </div>
+</form>

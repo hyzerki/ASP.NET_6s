@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab6", "lab6\lab6.csproj", "{BFB7EBE7-8605-4E5C-B04C-8960E64A6AA2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5C889C74-34C5-4A9D-BBC5-E72B1467E508} = {5C889C74-34C5-4A9D-BBC5-E72B1467E508}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneDictionaryLib", "PhoneDictionaryLib\PhoneDictionaryLib.csproj", "{5C889C74-34C5-4A9D-BBC5-E72B1467E508}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFB7EBE7-8605-4E5C-B04C-8960E64A6AA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFB7EBE7-8605-4E5C-B04C-8960E64A6AA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFB7EBE7-8605-4E5C-B04C-8960E64A6AA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFB7EBE7-8605-4E5C-B04C-8960E64A6AA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C889C74-34C5-4A9D-BBC5-E72B1467E508}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C889C74-34C5-4A9D-BBC5-E72B1467E508}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C889C74-34C5-4A9D-BBC5-E72B1467E508}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C889C74-34C5-4A9D-BBC5-E72B1467E508}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7DEA6F1-3B54-446F-B503-B85628F9E913}
+	EndGlobalSection
+EndGlobal

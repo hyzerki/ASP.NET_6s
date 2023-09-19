@@ -1,0 +1,9 @@
+﻿@model PhoneDictionaryLib.PhoneEntry
+<hr />
+<div>
+    @Model.Name @Model.Phone
+</div>
+<div>
+    <a href="/Dict/Update/@Model.Id" class="btn btn-danger">Изменить</a>
+    <a href="/Dict/Delete/@Model.Id" class="btn btn-danger">Удалить</a>
+</div>
