@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>FIT Index</h2>
+
+<h1>FIE</h1>
+<table>
+    <tr>
+        <td>Авторизация выполнена? </td>
+        <td>@(User.Identity.IsAuthenticated? "да":"нет" )</td>
+    </tr>
+    <tr>
+        <td>Текущий пользователь </td>
+        <td>@(!String.IsNullOrEmpty(User.Identity.Name) ? User.Identity.Name : "--" )</td>
+    </tr>
+    <tr>
+        <td>Текущий пользователь имеет роль Administrator?  </td>
+        <td>@(User.IsInRole("Administrator")? "да":"нет" )</td>
+    </tr>
+    <tr>
+        <td>Текущий пользователь имеет роль Employer? </td>
+        <td>@(User.IsInRole("Employer") ? "да":"нет" )</td>
+    </tr>
+</table>
+
+<div>
+    @if (User.IsInRole("Employer") || User.IsInRole("Guest"))
+    {
+        @Html.ActionLink("FIE/FIE_TM", "/FIE_TM", "FIE")<br />
+        @Html.ActionLink("FIE/FIE_UR", "/FIE_UR", "FIE")<br />
+        @Html.ActionLink("FIE/FIE_UP", "/FIE_UP", "FIE")<br />
+    }
+    @Html.ActionLink("BSTU/Index", "/Index", "BSTU")<br />
+
+</div>
