@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<a href="/Dict/Add" class="btn btn-primary">Добавить новый</a>
+@foreach (lab8.Models.PhoneEntry entry in ViewBag.Phones)
+{
+    <hr />
+    <div>
+        @entry.Name @entry.Phone
+    </div>
+    <div>
+        <a href="/Dict/Update/@entry.Id" class="btn btn-danger">Изменить</a>
+        <a href="/Dict/Delete/@entry.Id" class="btn btn-danger">Удалить</a>
+    </div>
+}
